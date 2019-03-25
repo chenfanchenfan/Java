@@ -26,7 +26,7 @@ public class Main {
 
         HttpGet getHomePage = new HttpGet("http://www.zhihu.com/");
         try {
-            //填充登陆请求中基本的参数
+            //填充登陆请求中基本的参数 大师傅士大夫是豆腐干豆腐干
             CloseableHttpResponse response = httpClient.execute(getHomePage);
             String responseHtml = EntityUtils.toString(response.getEntity());
             String xsrfValue = responseHtml.split("<input type=\"hidden\" name=\"_xsrf\" value=\"")[1].split("\"/>")[0];
